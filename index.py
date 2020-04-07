@@ -1,6 +1,8 @@
-from algorithms.A2C.agent import Agent as A2CAgent
 import matplotlib.pyplot as plt
 import gym
+from algorithms.A2C.Agent import Agent as A2CAgent
+from algorithms.DoubleDQL.DQN import dqn
+
 
 def test(agent, episodes):
 
@@ -11,7 +13,7 @@ def test(agent, episodes):
         done = False
         score = 0
         while done is False:
-            
+
             action = agent.act(state)
 
             new_state, reward, done, _ = env.step(action)
@@ -54,8 +56,6 @@ if __name__ == "__main__":
 
     env = gym.make("CartPole-v0")
 
-    a2c_agent = A2CAgent(env)
+    ddql_agent = dqn(env)
 
-    a2c_agent.run()
-
-    test(a2c_agent, 200)
+    test(ddql_agent, 200)
