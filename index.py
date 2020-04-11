@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import gym
-from algorithms.A2C.Agent import Agent as A2CAgent
-from algorithms.DoubleDQL.DQN import dqn
+from algorithms.DuelingDQN.DDQN import ddqn
 
 
 def test(agent, episodes):
@@ -56,6 +55,6 @@ if __name__ == "__main__":
 
     env = gym.make("CartPole-v0")
 
-    ddql_agent = dqn(env)
+    ddql_agent = ddqn(env)
 
     test(ddql_agent, 200)

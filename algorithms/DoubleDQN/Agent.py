@@ -3,8 +3,8 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
-from algorithms.DoubleDQL.Network import Network as QNetwork
-from algorithms.DoubleDQL.ReplayBuffer import ReplayBuffer
+from algorithms.DoubleDQN.Network import Network as QNetwork
+from algorithms.DoubleDQN.ReplayBuffer import ReplayBuffer
 
 BUFFER_SIZE = int(1e5)
 BATCH_SIZE = 24

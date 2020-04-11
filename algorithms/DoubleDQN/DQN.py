@@ -3,7 +3,7 @@ from collections import deque, namedtuple
 import numpy as np
 import torch
 import matplotlib.pyplot as plt
-from algorithms.DoubleDQL.Agent import Agent
+from algorithms.DoubleDQN.Agent import Agent
 
 
 def dqn(env, n_episodes=5000, eps_start=1.0, eps_end=0.001, eps_decay=0.995):
